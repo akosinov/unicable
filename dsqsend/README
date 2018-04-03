@@ -1,0 +1,24 @@
+Simple tool for sending diseqc sequences using STB card on linux.
+
+Size of each sequence is limited to 6 by hardware and Linux API.
+Use dconv -l option for split programming sequences to small pieces.
+
+compiling:
+gcc senddsq.c -o senddsq
+
+help:
+./senddsq -h
+
+Example 1 (you have ready small-splited sequence)
+
+./senddsq -i myfile.dsq
+
+this command sending diseqc sequences from myfile.dsq
+
+Example 2: (you have .bin file from original app)
+
+./dconv -i myfile.bin -it bin -ot dsq -l 6 | ./senddsq
+or
+./dconv -i myfile.dsq -it dsq -ot dsq -l 6 | ./senddsq
+
+this commands take myfile.bin (myfile.dsq), converting it to small-pieced dsq and sends thru STB card

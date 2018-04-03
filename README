@@ -2,3 +2,5 @@ This is a set of tools related to maxLinear Unicable II devices programming.
 
 hookdll	- hook dll for snifiing exchange between original programmer and app. Windows c++
 dconv	- config formats converter. Go code
+dsqsend	- sending diseqc sequences using STB card. Linux C code
+diseqc2	- diseqc firmware for STM32072B-DISCOVERY. Coretex-M0 ARM C code
