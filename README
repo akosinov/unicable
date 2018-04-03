@@ -4,3 +4,8 @@ hookdll	- hook dll for snifiing exchange between original programmer and app. Wi
 dconv	- config formats converter. Go code
 dsqsend	- sending diseqc sequences using STB card. Linux C code
 diseqc2	- diseqc firmware for STM32072B-DISCOVERY. Coretex-M0 ARM C code
+
+All tools have some issues, but i'm solved all my tasks.
+I'm has no time and i stop working on this project, so forking and future development is welcome!
+
+I will try to answering in Issues section, so if you has a question - welcome.
