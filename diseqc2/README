@@ -8,7 +8,7 @@ some STmicro files has little mods. be careful
 Schematic is simple:
 Input circuit: Cable -> small inductor -> filter capacitor -> R-R voltage divider form +3V to GND -> PA1
 Output circuit: PA8 -> current limiter 2K R -> GP NPN transitor base, emitter grounded, collector -> 22K R -> Cable
-Sorry, i'm to lazy for shcematic drawing.
+Sorry, i'm too lazy for schematic drawing.
 
 use any st-link for flash firmware, then use USER usb connector on board (side, not center)
 some CDC usb device will present in your system.
