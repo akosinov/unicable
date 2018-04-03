@@ -1,0 +1,11 @@
+simple Go app for converting maxLinear configs.
+
+building:
+go build
+
+help:
+dconv -h
+
+example:
+cat /dev/ttyACM0 > dconv -it dmp -ot dsq -o myconfig.dsq
+this command take dump-stream from programmer, convert it to diseqc sequence and write to myconfig.dsq

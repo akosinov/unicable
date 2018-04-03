@@ -1,0 +1,4 @@
+This is a set of tools related to maxLinear Unicable II devices programming.
+
+hookdll	- hook dll for snifiing exchange between original programmer and app. Windows c++
+dconv	- config formats converter. Go code
