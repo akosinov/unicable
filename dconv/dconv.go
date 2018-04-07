@@ -41,7 +41,7 @@ func run() (n int64, err error) {
 
 	outFile := os.Stdout
 	if *outNamePtr != "" {
-		if outFile, err = os.OpenFile(*outNamePtr, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0); err != nil {
+		if outFile, err = os.OpenFile(*outNamePtr, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 664); err != nil {
 			return
 		}
 		defer dclose(outFile)
