@@ -16,7 +16,6 @@ int dsend(int fd, char *data) {
 	cmd.msg_len = 0;
 	int p = 0, processed;
 	unsigned char d;
-
 	while(sscanf(&data[p], "%02hhx %n", &d, &processed) == 1) {
 		if(cmd.msg_len < sizeof(cmd.msg)) {
 			printf("%02X ", d);
@@ -80,6 +79,11 @@ int main (int argc, char **argv) {
 		return -1;
 	}
 	
+	if(ioctl(fd, FE_SET_VOLTAGE, SEC_VOLTAGE_13))	{
+	    printf("problem Setting the Voltage\n");
+	    return -1;
+	}
+	usleep(2000000);
 	while(fgets(buf, sizeof(buf), in) && (!dsend(fd, buf))) {
 	}
 	if(ferror(in)) {
